@@ -1,2 +1,0 @@
-# Nutricolor
-Created with CodeSandbox
