@@ -2,7 +2,7 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { ReactComponent as Lupa } from "../../public/images/Lupa.svg";
+import { ReactComponent as Lupa } from "../assets/Lupa.svg";
 import "./Drawer.css";
 import CollorPallete from "./CollorPallete";
 
