@@ -1,8 +1,10 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Home from "./pages/Home";
-import Drawer from "./pages/Drawer";
+import React from 'react';
+import Routes from './routes';
 
-export default function App() {
-  return <Drawer />;
+function App() {
+  return (
+    <Routes />
+  );
 }
+
+export default App;
