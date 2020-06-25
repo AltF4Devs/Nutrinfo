@@ -1,7 +1,8 @@
 import React from 'react';
 
+//CSS
 import "./styles.css";
-
+import "./responsive.css";
 //Imagens
 import Logo1 from "../../assets/logo1.png";
 import nino from "../../assets/nino.png";
@@ -22,31 +23,32 @@ export default function Home() {
         <>
             <NavBar/>
             
-            <Container className="sectionInitial mh-25" fluid>
+            <Container className="sectionInitial mh-25" fluid="true">
                 <Row >
-                    <Col id="nino" sm> 
-                        <Image src={nino} fluid />
+                    <Col id="nino" sm="true"> 
+                        <Image src={nino} fluid="true" />
                     </Col>
 
-                    <Col id="center" sm>  
+                    <Col id="center" sm="true">  
                         <h1>LIVRO DE COLORIR DIGITAL</h1>
                         <h2>VAMOS COLORIR?</h2>
 
                         <Button variant="warning" id="bnt-baixar">BAIXAR</Button>{' '}
                         <Button variant="warning" id="bnt-colorir">COLORIR</Button>{' '}
 
-                        <div id="stayHome" sm>
+                        <div id="stayHome" sm="true">
                             <h3>FIQUE EM CASA</h3>
                             <h3>AJUDE A COMBATER O COVID-19</h3>
                         </div>    
                     </Col>
 
-                    <Col id="nina" sm> 
-                        <Image src={nina} fluid className="nina"/>
+                    <Col id="nina" sm="true"> 
+                        <Image src={nina} fluid="true" className="nina"/>
                     </Col>
                 </Row>
             </Container>
-            <Container className="sectionAbout mh-25" fluid>
+
+            <Container className="sectionAbout mh-25" fluid="true">
                 <h1>Sobre</h1>
                 <Row >
                     <Col md="4" className="d-flex align-items-center justify-content-center">
@@ -59,9 +61,11 @@ export default function Home() {
                             saúde.
                         </p>
                     </Col>
-                    <Col md="4" className="d-flex align-items-center justify-content-center">
-                        <Image src={Logo1} fluid className="logo1"/>
+
+                    <Col md="4" className="d-flex align-items-center justify-content-center"> 
+                        <Image src={Logo1} fluid="true" className="logo1"/>
                     </Col>
+
                     <Col md="4" className="d-flex align-items-center justify-content-center">
                         <p align="justify">
                             Neste momento de pandemia por 
@@ -74,35 +78,36 @@ export default function Home() {
                         </p>
                     </Col>
                 </Row>
-               
             </Container>
 
-            <Container className="sectionVideo mh-25" fluid >
+            <Container className="sectionVideo mh-25" fluid="true" >
                 <h1>Videos</h1> 
 
-                <Row id="videos">
-                    <Col sm><iframe width="340" height="250" src="https://www.youtube.com/embed/7_CGP-12AE0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></Col>
-                    <Col sm><iframe width="340" height="250" src="https://www.youtube.com/embed/7_CGP-12AE0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></Col>
-                    <Col sm><iframe width="340" height="250" src="https://www.youtube.com/embed/7_CGP-12AE0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></Col>
+                <Row className="videos d-flex pt-3 justify-content-around" >
+                    <Col sm="true" md="true" xs="true" ><iframe width="340" height="250" src="https://www.youtube.com/embed/7_CGP-12AE0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></Col>
+                    <Col sm="true" md="true" xs="true" ><iframe width="340" height="250" src="https://www.youtube.com/embed/7_CGP-12AE0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></Col>
+                    <Col sm="true" md="true" xs="true" ><iframe width="340" height="250" src="https://www.youtube.com/embed/7_CGP-12AE0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></Col>
 
                 </Row>
 
-                <Row id="videos">
-                    <Col sm><iframe width="340" height="250" src="https://www.youtube.com/embed/7_CGP-12AE0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></Col>
-                    <Col sm><iframe width="340" height="250" src="https://www.youtube.com/embed/7_CGP-12AE0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></Col>
-                    <Col sm><iframe width="340" height="250" src="https://www.youtube.com/embed/7_CGP-12AE0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></Col>   
+                <Row className="videos d-flex pt-3 justify-content-around" >
+                    <Col sm="true"  md="true" xs="true" ><iframe width="340" height="250" src="https://www.youtube.com/embed/7_CGP-12AE0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></Col>
+                    <Col sm="true"  md="true" xs="true" ><iframe width="340" height="250" src="https://www.youtube.com/embed/7_CGP-12AE0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></Col>
+                    <Col sm="true"  md="true" xs="true" ><iframe width="340" height="250" src="https://www.youtube.com/embed/7_CGP-12AE0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></Col>
+
                 </Row>
+
                 
             </Container>
 
-            <Container className="sectionTeam mh-25" fluid >
+            <Container className="sectionTeam " fluid="true" >
                 <h1>Equipe</h1> 
 
-                <Row>
-                    <Col sm md>
+                <Row >
+                    <Col sm="true" md>
                         <h3>PROFESSORES</h3>
 
-                        <div class="name">
+                        <div id="professor">
                             <p> Alanderson Ramalho </p>
                             <p> Camyla Rocha </p>
                             <p> Eline Oliveira </p>
@@ -110,10 +115,11 @@ export default function Home() {
                             <p> Tatiane Dalamaria </p>   
                         </div>
                     </Col>
-                    <Col sm md>
+
+                    <Col sm="true" md>
                         <h3>ESTUDANTES DE NUTRIÇÃO</h3>
                         
-                        <div class="name">
+                        <div id="nutricao">
                             <p> Alice Malveira </p>
                             <p> Andressa Cristini </p>
                             <p> Clarissa Castela </p> 
@@ -125,10 +131,10 @@ export default function Home() {
                         </div>    
                     </Col>
 
-                    <Col sm md>
+                    <Col sm="true" md>
                         <h3>ESTUDANTES DE OUTROS CURSOS</h3>
                        
-                        <div class="name">
+                        <div id="outros">
                             <p>  Andrielle Lima (Sistemas de Informação) </p>
                             <p>  Bruno Trindade (Sistemas de Informação) </p>
                             <p>  Geovana Silva (Jornalismo) </p> 
@@ -141,36 +147,31 @@ export default function Home() {
                 </Row>
             </Container>
 
-            <Container className="footer mh-25" fluid>
-                    <Row sm>
-                        <Col sm>
-                            <p id="address">
+            <footer className="container col-12  pt-3 footer text-center " >
+                   <container className="container col-12 col-md-8 d-flex justify-content-around" >
+                                <p id="address">
                                     UFAC
                                     Campus Universitário
                                     Rodovia BR 364, Km 04 - Distrito Industrial, Rio Branco - AC, 69920-900
-                            </p>
-                        </Col>
+                                </p>
+                            
 
-                        <Col sm>
-                            <div id="contact">
-                                <p >Contato</p>
-                                <strong>contato@nutrinfo.com.br</strong>
-                            </div>
-                            
-                        </Col>
+                                <div id="contact">
+                                    <p >Contato</p>
+                                    <strong>contato@nutrinfo.com.br</strong>
+                                </div>
+                                
                         
-                        <Col sm>
-                            <div id="social">
-                                <p>Redes</p>
-                                <a href="">Instagram</a>
-                                <a href="">Facebook</a>
-                                <a href="">Youtube</a>
-                            </div>
                             
-                        </Col>
-                    
-                    </Row>
-            </Container>
+                                <div id="social">
+                                    <p>Redes</p>
+                                    <a href="">Instagram</a>
+                                    <a href="">Facebook</a>
+                                    <a href="">Youtube</a>
+                                </div>
+
+                   </container>
+            </footer>
         </>
     )
 }
