@@ -3,10 +3,22 @@ import React from 'react';
 //CSS
 import "./styles.css";
 import "./responsive.css";
+
 //Imagens
-import Logo1 from "../../assets/logo1.png";
+import logoNutrinfo from "../../assets/logo-nutrinfo.png";
+import logoUfac from "../../assets/logo-ufac.png";
+
 import nino from "../../assets/nino.png";
 import nina from "../../assets/nina.png";
+
+import baixar from "../../assets/btn-baixar.png";
+import colorir from "../../assets/btn-colorir.png";
+
+
+
+import instagram from "../../assets/instagram.png";
+import facebook from "../../assets/facebook.png";
+import youtube from "../../assets/youtube.png";
 
 //Bootstrap
 import NavBar from '../../components/NavBar/index';
@@ -26,7 +38,7 @@ export default function Home() {
             <Container className="sectionInitial mh-25" fluid="true">
                 <Row >
                     <Col id="nino" sm="true"> 
-                        <Image src={nino} fluid="true" />
+                        <Image src={nino} fluid="true" className="d-none d-sm-block" />
                     </Col>
 
                     <Col id="center" sm="true">  
@@ -43,7 +55,7 @@ export default function Home() {
                     </Col>
 
                     <Col id="nina" sm="true"> 
-                        <Image src={nina} fluid="true" className="nina"/>
+                        <Image src={nina} fluid="true" className="d-none d-sm-block"/>
                     </Col>
                 </Row>
             </Container>
@@ -63,7 +75,7 @@ export default function Home() {
                     </Col>
 
                     <Col md="4" className="d-flex align-items-center justify-content-center"> 
-                        <Image src={Logo1} fluid="true" className="logo1"/>
+                        <Image src={logoNutrinfo} fluid="true" className="logo1"/>
                     </Col>
 
                     <Col md="4" className="d-flex align-items-center justify-content-center">
@@ -147,30 +159,34 @@ export default function Home() {
                 </Row>
             </Container>
 
-            <footer className="container col-12  pt-3 footer text-center " >
-                   <container className="container col-12 col-md-8 d-flex justify-content-around" >
-                                <p id="address">
-                                    UFAC
-                                    Campus Universitário
-                                    Rodovia BR 364, Km 04 - Distrito Industrial, Rio Branco - AC, 69920-900
-                                </p>
-                            
+            <footer className="container col-12  d-flex justify-content-around" >
+                <div id="ufac">
+                    <Image src={logoUfac} fluid="true" />
+                </div>                
+                
+                <div id="contact">
+                    <p >Contato</p>
+                    <strong>contato@nutrinfo.com.br</strong>
+                </div>
+                
+        
+            
+                <div id="social" className="d-flex align-items-start ">
+                    
+                    <Col>
+                        <Row>
+                            <p>Redes Sociais</p>
+                        </Row>
+                        <Row>
+                            <a href=""> <Image src={instagram} fluid="true" /></a>
+                            <a href=""> <Image src={facebook} fluid="true" /></a>
+                            <a href=""> <Image src={youtube} fluid="true" /></a>
+                        </Row>  
+                    </Col>
+                                       
+                </div>
 
-                                <div id="contact">
-                                    <p >Contato</p>
-                                    <strong>contato@nutrinfo.com.br</strong>
-                                </div>
-                                
-                        
-                            
-                                <div id="social">
-                                    <p>Redes</p>
-                                    <a href="">Instagram</a>
-                                    <a href="">Facebook</a>
-                                    <a href="">Youtube</a>
-                                </div>
 
-                   </container>
             </footer>
         </>
     )

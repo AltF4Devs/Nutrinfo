@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from "react-bootstrap/Navbar";
 import "./styles.css";
-import logo from "../NavBar/logo.png"
+import logo from "../NavBar/logo-nutrinfo.png";
 
 export default function NavBar() {
 

@@ -5,28 +5,13 @@
     .sectionInitial {
         width: 100%;
     }
-    .sectionInitial img{
-        width: 150px;
-        
-    }
-    .sectionInitial #nino{
-    padding: 0 10vh;
-    padding-top: 5vh;
-    
-    
-}
-
-.sectionInitial #nina{
-    padding: 0 10vh;
-    
    
-    
-}
-
     .sectionInitial h1,h2,h3 {
         font-size: 30px;
        
     }
+
+
 }
 
 
