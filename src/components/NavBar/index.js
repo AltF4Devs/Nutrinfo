@@ -1,15 +1,19 @@
-import React from 'react';
+import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import "./styles.css";
+import Logo from "../../assets/Logo.png";
 
 export default function NavBar() {
-
-    return (
-        <Navbar variant="dark" className="navBar">
-            <Navbar.Brand href="#home">
-                <img alt="" src="/logo.svg" width="30" height="30" className="d-inline-block align-top"/>{' '}
-                Nutrinfo
-            </Navbar.Brand>
-        </Navbar>
-    );
+  return (
+    <Navbar variant="dark" className="navBar">
+      <Navbar.Brand href="/">
+        <img
+          alt=""
+          src={Logo}
+          width="160"
+          className="d-inline-block align-top"
+        />{" "}
+      </Navbar.Brand>
+    </Navbar>
+  );
 }
