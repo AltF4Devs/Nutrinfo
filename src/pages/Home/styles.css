@@ -2,181 +2,110 @@
 @import url('https://fonts.googleapis.com/css2?family=Chicle&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap');
 
+/*[class*="col"]
+{
+    border: 1px solid red;
+}*/
 
-/* SECTION INITIAL*/
-.sectionInitial {
+.container-blue
+{
     background: #CCE7F9;
-    width: 100%;
 }
-
-.sectionInitial img{
-    width: 60vh;
-    
-}
-.sectionInitial #nino{
-    padding: 0 10vh;
-    padding-top: 5vh;
-    
-    
-}
-
-.sectionInitial #nina{
-    padding: 0 10vh;
-    
-   
-    
-}
-.sectionInitial #center {
-    height: 80vh;
+.container-blue #center
+{
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    
-
 }
-
-.sectionInitial h1,h2,h3 {
+.ff-chicle-cursive
+{
     font-family: 'Chicle', cursive;
-    align-items: center;
-   
 }
 
-.sectionInitial h1,h3{
-    color: #1B6DB9;
-   
+.section-title
+{
+    text-align: center;
+    padding: 3vh 0vh;
+    font-weight: bold;
 }
 
-.sectionInitial h1{
-    padding-top: 20vh;
-   
+.nutri-info-logo
+{
+    display: block;
+    margin: auto;
+    padding: 0;
+    max-width: 25vh;
 }
 
-.sectionInitial h2{
-    
-    padding-bottom: 5vh;
-    color: #F27838;
-}
-
-.sectionInitial button {
-  
-    border-radius: 8px;
-    border: none;
-}
-
-.sectionInitial #bnt-baixar{
-    margin-right:1vw;
-    background-color: #A0B9D0; 
-}
-
-.sectionInitial #bnt-colorir{
-    background-color:#F1D48B;
-}
-
-.sectionInitial #stayHome{
-    padding-top: 20vh;
-
-}
-
-/*SECTION ABOUT*/
-.sectionAbout {
-    padding-right: 10vh;
-    padding-left: 10vh;
-    width: 100%;
-
-    font-family: 'Roboto', sans-serif;
-    
+.container-white
+{
+    background-color: #FFF;
     border-top: solid 6px #999999;
     border-bottom: solid 6px #999999;
-   
 }
 
-.sectionAbout h1{
-    padding-top: 40px;
+#container-about
+{
+    padding-bottom: 3vh;
+}
+#container-about .row [class*="col"]
+{
+    display: flex;
+    align-items: center;
     text-align: center;
-
-    font-style: normal;
-    font-weight: bold;
-    font-size: 40px;  
+}
+#container-about .row [class*="col"] p
+{
+    font-size: 28px;
+    padding: 2vh 2vh;
 }
 
-.sectionAbout p {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
+.row-videos [class*="col"]
+{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
 }
 
-/*SECTION VIDEO*/
-.sectionVideo {
-    font-family: 'Roboto', sans-serif;
-    background: #CCE7F9;
-    width: 100%;
-    border-bottom: solid 6px #999999;
+/*Small devices (landscape phones, 576px and up)*/
+@media (max-width: 576px) {
+    #footer [class*="col"]
+    {
+        padding: 2vh 0vh!important;
+    }
 }
 
-.sectionVideo h1{
-    padding-top: 20px;
-    padding-bottom: 10vh;
-
-    text-align: center;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 40px;
-  
-}
-
-.sectionVideo .videos {
-    padding-bottom: 15vh;
-}
-
-.sectionVideo #item-video{
-    padding: 0 5vh;
-}
-
-.sectionVideo Col {
-    background-color: #F27838;
-}
-
-/* SECTION TEAM */
-
-.sectionTeam {
-    width: 100%;
-    padding-right: 10vh;
-    padding-left: 10vh;
-    padding-bottom: 10vh;
-
-    font-family: 'Roboto', sans-serif;
-    background: white;
-    border-bottom: solid 6px #999999;
-}
-
-.sectionTeam h1{
-    margin-top: 20px;
-    margin-bottom: 10vh;
-
-    text-align: center;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 40px;
-  
-}
-
-.sectionTeam h3{
-    margin-top: 20px;
-    padding-bottom: 2px;
-
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    
-}
-
-.sectionTeam p{
-    font-size: 20px;
-   
+/*Full HD Monitor*/
+@media (min-width: 1200px) {
+    #container-about .row [class*="col"] p
+    {
+        font-size: 28px;
+        padding: 2vh 5vh;
+    }
 }
 
 
 /* FOOTER */
+#footer .row
+{
+    padding: 10px 0px;
+}
+#footer p
+{
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+#footer [class*="col"]
+{
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+/*
+
 footer {
     
     position:absolute;
@@ -234,3 +163,5 @@ footer #social img {
     width: 25px;
     height: 35px;
 }
+
+*/

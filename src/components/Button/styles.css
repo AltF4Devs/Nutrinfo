@@ -1,0 +1,35 @@
+.btn-default
+{
+    border: none;
+    background-color: #A0B9D0;
+    border-radius: 15px;
+    padding: 11px;
+    width: 150px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.btn-default:hover
+{
+    filter: brightness(0.9);
+}
+
+.btn-default:focus
+{
+    outline: none;
+    box-shadow: 0 0 0 2pt black;
+}
+
+.btn-icon
+{
+    max-width: 4vh;
+    height: auto; 
+    padding: 0px;
+    margin-right: 10px;
+}
+
+.btn-yellow
+{
+    background-color: #F1D48B;
+}
