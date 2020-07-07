@@ -22,8 +22,8 @@ export default function Gallery(props) {
       <Row className="container-gallery">
         {content.map((item, id) => (
           <Col sm={6} className="item-gallery" onClick={() => handlePage(id)}>
-            {/*<item.Img className="square-gallery" />*/}
-            {item.Img}
+            <item.Img className="square-gallery" />
+            
             {item.type === "img" ? (
               <FaPalette className="icon-drawer" />
             ) : (
