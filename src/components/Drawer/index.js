@@ -17,8 +17,9 @@ export default function Drawer(props) {
   const [redo, setRedo] = React.useState([]); // refazer
   const refDrawer = React.useRef()
 
-  React.useEffect(() => {  
-    paintSave()
+  React.useEffect(() => {
+    clearUndoRedo()  
+    paintSave() // Pinta o desenho atual, se ele ja tiver sido pintado antes
 
     // Salva uma referencia do desenho atual, para que ele possa ser salvo
     // quando o novo desenho for carregado no DOM
@@ -62,6 +63,11 @@ export default function Drawer(props) {
     path.style.fill = currentColor;
     pushUndo(prevColor, path);
   };
+
+  const clearUndoRedo = () => {
+    setUndo([])
+    setRedo([])
+  }
 
   const pushUndo = (prevColor, path) => {
     const obj = { path, prevColor };
