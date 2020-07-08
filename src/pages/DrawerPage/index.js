@@ -7,53 +7,52 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import "./DrawerPage.css";
 
-import DrawerOne from '../../components/Svgs/DrawerOne'
+import DrawerOne from '../../components/Svgs/Drawer1'
 import TextThree from '../../components/Svgs/TextThree'
-import DrawerFour from '../../components/Svgs/DrawerFour'
+import DrawerFour from '../../components/Svgs/Drawer4'
 import TextFive from '../../components/Svgs/TextFive'
 import TextSix from '../../components/Svgs/TextSix'
 import TextEight from '../../components/Svgs/TextEight'
-import DrawerNine from '../../components/Svgs/DrawerNine'
+import DrawerNine from '../../components/Svgs/Drawer9'
 import TextTen from '../../components/Svgs/TextTen'
-import DrawerEleven from '../../components/Svgs/DrawerEleven'
+import DrawerEleven from '../../components/Svgs/Drawer11'
 import TextTwelve from '../../components/Svgs/TextTwelve'
-import DrawerThirteen from '../../components/Svgs/DrawerThirteen'
+import DrawerThirteen from '../../components/Svgs/Drawer13'
 import TextFourteen from '../../components/Svgs/TextFourteen'
-import DrawerFifteen from '../../components/Svgs/DrawerFifteen'
-import DrawerSixteen from '../../components/Svgs/DrawerSixteen'
+import DrawerFifteen from '../../components/Svgs/Drawer15'
+import DrawerSixteen from '../../components/Svgs/Drawer16'
 
 
 export default function DrawerPage(props) {
 
   const [content, setContent] = React.useState([
-    { Img: DrawerFour,  type: "img", newImg: null },
-    { Img: TextThree, type: "text", newImg: null },
-    /*{ Img: DrawerFour , type: "img", newImg: null },
-    { Img: TextFive  ,type: "text", newImg: null },
-    { Img: TextSix  ,type: "text", newImg: null },
-    { Img: TextEight, type: "text", newImg: null },
-    { Img: DrawerNine , type: "img", newImg: null },
-    { Img: TextTen, type: "text", newImg: null },
-    { Img: DrawerEleven, type: "img", newImg: null },
-    { Img: TextTwelve, type: "text", newImg: null },
-    { Img: DrawerThirteen , type: "img", newImg: null },
-    { Img: TextFive, type: "text", newImg: null },
-    { Img: TextFourteen , type: "text", newImg: null },
-    { Img: DrawerFifteen, type: "img", newImg: null },
-    { Img: DrawerSixteen, type: "img", newImg: null },*/
+    { Img: DrawerOne,  type: "img", newImg: null, id: 0 },
+    { Img: TextThree, type: "text", newImg: null, id: 1 },
+    { Img: DrawerFour,  type: "img", newImg: null, id: 2 },
+    { Img: TextFive  ,type: "text", newImg: null, id: 3 },
+    { Img: TextSix  ,type: "text", newImg: null, id: 4 },
+    { Img: TextEight, type: "text", newImg: null, id: 5 },
+    { Img: DrawerNine , type: "img", newImg: null, id: 6 },
+    { Img: TextTen, type: "text", newImg: null, id: 7 },
+    { Img: DrawerEleven, type: "img", newImg: null, id: 8 },
+    { Img: TextTwelve, type: "text", newImg: null, id: 9 },
+    { Img: DrawerThirteen , type: "img", newImg: null, id: 10 },
+    { Img: TextFourteen , type: "text", newImg: null, id: 11 },  
+    { Img: DrawerFifteen, type: "img", newImg: null, id: 12 },
+    { Img: DrawerSixteen, type: "img", newImg: null, id: 13 },
   ]);
-
-  const [current, setCurrent] = React.useState(content[0]);
+  const [idx, setIdx] = React.useState(0);
+  const currentPage = content[idx] // Only read
 
   const handleContent = (newContent) => {
     setContent(newContent)
   }
 
   const handlePage = idx => {
-    setCurrent(content[idx]);
-    console.log(idx);
+    setIdx(idx);
   };
 
+  console.log(content)
   return (
     <div className="background-drawer-page">
       <Navbar />
@@ -63,10 +62,10 @@ export default function DrawerPage(props) {
             <Gallery content={content} handlePage={handlePage} />
           </Col>
           <Col md={9}>
-            {current.type === "img" ? (
-              <Drawer page={current} content={content} handleContent={handleContent}/>
+            {currentPage.type === "img" ? (
+              <Drawer idx={idx} content={content} handleContent={handleContent}/>
             ) : (
-              <TextAudio content={current} />
+              <TextAudio content={currentPage} />
             )}
           </Col>
         </Row>

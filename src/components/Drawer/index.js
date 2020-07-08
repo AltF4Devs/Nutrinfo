@@ -8,37 +8,52 @@ import CollorPallete from "../CollorPallete/";
 import "./Drawer.css";
 
 export default function Drawer(props) {
-  const Page = props.page.Img;
+  const {idx, handleContent} = props
   const copyContent = [...props.content]
-  const {handleContent} = props
+  const currentPage = copyContent[idx]
+  const Page = currentPage.Img
   const [currentColor, setCurrentColor] = React.useState("#444");
   const [undo, setUndo] = React.useState([]); // desfazer
   const [redo, setRedo] = React.useState([]); // refazer
+  const refDrawer = React.useRef()
 
-  React.useEffect(() => {
-    // Se newImg não for nulo, a imagem ja foi pintada antes. Então repintamos
-    // os paths da imagem atual com as cores dos paths armazenados
-    if (copyContent[0].newImg){
-      const prevPaths = copyContent[0].newImg
-      const newDrawer = document.querySelector('.drawer')
-      const newPaths = newDrawer.querySelectorAll('path')
+  React.useEffect(() => {  
+    paintSave()
 
-      newPaths.forEach((np, idx) => {
-        np.style.fill = prevPaths[idx].style.fill
-      })
-    }
+    // Salva uma referencia do desenho atual, para que ele possa ser salvo
+    // quando o novo desenho for carregado no DOM
+    refDrawer.current = document.querySelector('.drawer')
 
     return () => {
       saveDrawer()
     }
-  }, [])
+  }, [Page])
+
+  const paintSave = () => {
+    // Se newImg não for nulo, a imagem ja foi pintada antes. Então repintamos
+    // os paths da imagem atual com as cores dos paths armazenados
+    if (currentPage.newImg){
+      const prevPaths = currentPage.newImg
+      const newDrawer = document.querySelector('.drawer')
+      const newPaths = newDrawer.querySelectorAll('path')
+
+      newPaths.forEach((np, idx) => {
+        np.style.fill = prevPaths[idx]
+      })
+    }
+  }
 
   const saveDrawer = () => {
     // Salva todos os paths do desenho atual, para armazenar o que foi pintado
-    const currentDrawer = document.querySelector('.drawer')
-    const paths = currentDrawer.querySelectorAll('path')
-    
-    copyContent[0].newImg = paths
+    // const currentDrawer = document.querySelector('.drawer')
+    const paths = refDrawer.current.querySelectorAll('path')
+
+    const colors = [...paths].map(p => {
+      return p.style.fill
+    })
+
+    currentPage.newImg = colors
+    copyContent[idx] = currentPage
     handleContent(copyContent)
   }
 
