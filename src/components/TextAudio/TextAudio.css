@@ -1,0 +1,31 @@
+.page-audio {
+    width: 600px;
+    height: 600px;
+}
+
+.icon-listen { 
+    font-size: 25px;
+}
+
+.btn-listen {
+    background-color: #f27838;
+    color: #111;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.btn-listen:active {
+    color: #111 !important;
+    background-color: #ff7121 !important;
+}
+
+.btn-listen:hover, .btn-listen:focus{
+    color: #111 !important;
+    background-color: #e0570f !important;
+}
+
+.display-center {
+    display: flex;
+    justify-content: center;
+}
