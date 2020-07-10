@@ -10,6 +10,7 @@
     "@svgr/webpack": "^5.4.0",
     "bootstrap": "4.4.1",
     "canvg": "3.0.6",
+    "file-loader": "^6.0.0",
     "react": "16.13.1",
     "react-bootstrap": "1.0.0",
     "react-color": "2.18.1",
