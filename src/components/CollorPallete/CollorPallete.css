@@ -10,6 +10,25 @@
   border-radius: 10px;
 }
 
+@media (max-width: 575.98px) {
+  .pallete-container{
+    width: 100%;
+  }
+  .circle-picker {
+    width: 100% !important;
+    margin-right: 0px !important;
+    margin-bottom: 0px !important;
+    justify-content: center;
+  }
+  .circle-picker span {
+    margin: 0px;
+  }
+  .circle-picker > span > div {
+    margin-right: 0px !important;
+    margin-bottom: 0px !important;
+  }
+}
+
 .circle-picker > span > div > span > div {
   cursor: url("../../assets/mural.svg") 15 15, pointer !important;
 }

@@ -14,10 +14,7 @@ export default function Gallery(props) {
   return (
     <Container>
       <Row>
-        <Button block className="btn-download">
-          <IconDown style={{ marginRight: 5, width: 28, height: 28 }} />
-          Baixar
-        </Button>
+        
       </Row>
       <Row className="container-gallery">
         {content.map((item, id) => (

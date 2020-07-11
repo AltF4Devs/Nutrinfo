@@ -1,18 +1,11 @@
 .drawer {
-  width: 600px;
-  height: 700px;
   cursor: url("../../assets/paint-brush.svg") 0 32, auto;
 }
 
-.str0 {
-  stroke: black;
-  stroke-width: 20;
-  stroke-miterlimit: 22.9256;
-}
-
-.fil1 {
-  fill: black;
-}
-.fil0 {
-  fill: white;
+@media (max-width: 575.98px) {
+  .drawer-content > .row {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: red;
+  }
 }

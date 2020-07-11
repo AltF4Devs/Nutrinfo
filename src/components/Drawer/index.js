@@ -113,7 +113,7 @@ export default function Drawer(props) {
   return (
     <Container className="drawer-content">
       <Row className="justify-content-md-center" style={{ marginTop: 10 }}>
-        <Col md={9}>
+        <Col md={7}>
           <Page className="drawer" onClick={e => drawerColor(e.target)} />
         </Col>
         <Col md={3}>

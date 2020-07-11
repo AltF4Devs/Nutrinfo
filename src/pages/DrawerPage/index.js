@@ -3,7 +3,8 @@ import Drawer from "../../components/Drawer";
 import Navbar from "../../components/NavBar";
 import Gallery from "../../components/Gallery";
 import TextAudio from "../../components/TextAudio";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
+import { ReactComponent as IconDown } from "../../assets/icon-down.svg";
 
 import "./DrawerPage.css";
 
@@ -55,13 +56,16 @@ export default function DrawerPage(props) {
   console.log(content)
   return (
     <div className="background-drawer-page">
-      <Navbar />
-      <Container fluid className="mt-3">
+      <Container fluid>
         <Row>
-          <Col md={3}>
-            <Gallery content={content} handlePage={handlePage} />
-          </Col>
-          <Col md={9}>
+        <Button  className="btn-download">
+          <IconDown style={{ marginRight: 5, width: 28, height: 28 }} />
+          Baixar
+        </Button>
+        </Row>
+        <Row>
+          <Col xs={3}>""</Col>
+          <Col lg={9} sm={12}>
             {currentPage.type === "img" ? (
               <Drawer idx={idx} content={content} handleContent={handleContent}/>
             ) : (
