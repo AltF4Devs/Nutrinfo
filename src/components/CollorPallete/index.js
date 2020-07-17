@@ -81,10 +81,18 @@ export default function CollorPallete(props) {
         </OverlayTrigger>
       </div>
 
+      {showPicker && (
+        <ChromePicker
+          color={color}
+          onChangeComplete={handleChangeComplete}
+          disableAlpha={true}
+        />
+      )}
+
       <OverlayTrigger
         placement="bottom"
         delay={{ show: 250, hide: 260 }}
-        overlay={<Tooltip id="button-tooltip-more">Mais Cores</Tooltip>}
+        overlay={<div></div>}
       >
         <Button
           variant="outline"
@@ -106,13 +114,6 @@ export default function CollorPallete(props) {
           </IconContext.Provider>
         </Button>
       </OverlayTrigger>
-      {showPicker && (
-        <ChromePicker
-          color={color}
-          onChangeComplete={handleChangeComplete}
-          disableAlpha={true}
-        />
-      )}
     </div>
   );
 }

@@ -3,16 +3,30 @@
   flex-direction: column;
   align-items: center;
   min-width: 150px;
-  width: 150px;
-  padding: 10px 0px;
+  padding: 10px;
   max-height: 800px;
   background-color: #d6b9b9;
   border-radius: 10px;
 }
 
+.chrome-picker
+{
+  width: 255!important;
+  position: absolute;
+  right: 22vh;
+  top: 56vh;
+}
+
 @media (max-width: 768px) {
   .pallete-container{
     width: 100%;
+    padding: 0px;
+  }
+  .chrome-picker
+  {
+    right: initial;
+    top: initial;
+    padding-bottom: 5px;
   }
   .circle-picker {
     width: 100% !important;
@@ -21,7 +35,10 @@
     justify-content: center;
   }
   .circle-picker span {
-    margin: 0px;
+    margin: 5px 10px;
+  }
+  .buttons-container {
+    margin-top: 30px!important;
   }
   .circle-picker > span > div {
     margin-right: 0px !important;
@@ -37,7 +54,7 @@
   display: flex;
   justify-content: space-around;
   width: 100px;
-  margin-top: 10px;
+  margin: 10px 0px;
 }
 
 .btn-circle {
