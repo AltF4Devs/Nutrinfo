@@ -2,7 +2,9 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
+//Images
+import NextPageImg from '../../assets/next_arrow.svg';
+import PreviousPageImg from '../../assets/previous_arrow.svg';
 
 import CollorPallete from "../CollorPallete/";
 import "./Drawer.css";
@@ -111,12 +113,18 @@ export default function Drawer(props) {
 
 
   return (
-    <Container className="drawer-content">
-      <Row className="justify-content-md-center" style={{ marginTop: 10 }}>
-        <Col md={7}>
-          <Page className="drawer" onClick={e => drawerColor(e.target)} />
+    <Container className="drawer-content" style={{ maxWidth: 'initial' }}>
+      <Row>
+        <Col xs={12} className="mobile-arrows">
+          <img src={PreviousPageImg} />
+          <img src={NextPageImg} />
         </Col>
-        <Col md={3}>
+        <Col sm={12} md={10} className="Col-Image">
+          <img src={PreviousPageImg} />
+          <Page className="drawer" onClick={e => drawerColor(e.target)} />
+          <img src={NextPageImg} />
+        </Col>
+        <Col sm={12} md={2} className="Col-CollorPallete">
           <CollorPallete
             handleColor={handleColor}
             color={currentColor}

@@ -13,9 +13,6 @@ export default function Gallery(props) {
 
   return (
     <Container>
-      <Row>
-        
-      </Row>
       <Row className="container-gallery">
         {content.map((item, id) => (
           <Col sm={6} className="item-gallery" onClick={() => handlePage(id)}>

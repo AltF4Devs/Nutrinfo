@@ -55,12 +55,12 @@ export default function DrawerPage(props) {
   console.log(content)
   return (
     <div className="background-drawer-page">
-      <Container fluid className="mt-3">
+      <Container fluid>
         <Row>
-          <Col md={3}>
+          <Col sm={12} md={3} className="Col-Gallery">
             <Gallery content={content} handlePage={handlePage} />
           </Col>
-          <Col md={9}>
+          <Col sm={12} md={9} style={{ height: '100vh', padding: 0 }}>
             {currentPage.type === "img" ? (
               <Drawer idx={idx} content={content} handleContent={handleContent}/>
             ) : (

@@ -2,10 +2,53 @@
   cursor: url("../../assets/paint-brush.svg") 0 32, auto;
 }
 
+.Col-Image
+{
+  display: flex;
+  justify-content: center;
+}
+
+.Col-Image svg
+{
+  height: 100vh;
+}
+
+.Col-CollorPallete
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-arrows
+{
+  display: none;
+}
+
 @media (max-width: 575.98px) {
-  .drawer-content > .row {
+
+  .Col-Image img
+  {
+    display: none;
+  }
+
+  .mobile-arrows
+  {
     display: flex;
-    flex-direction: column-reverse;
-    background-color: red;
+    justify-content: space-around;
+    width: 50px;
+    height: 50px;
+    margin: 5px 0px;
+  }
+
+  .Col-Image
+  {
+    margin: 10px 0px;
+  }
+
+  .Col-Image svg
+  {
+    height: 100%;
+    width: 100%;
   }
 }

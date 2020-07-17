@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
 import Home from "./pages/Home";
-import DrawerPage from "./pages/DrawerPage";
+import DrawerPage from "./pages/DrawerPage/index_new";
 
 const Routes = () => (
   <BrowserRouter>
