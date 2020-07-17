@@ -52,6 +52,16 @@ export default function DrawerPage(props) {
     setIdx(idx);
   };
 
+  const prevPage = () => {
+    if(idx > 0)
+      setIdx(idx => idx -= 1)
+  }
+
+  const nextPage = () => {
+    if(idx < 13)
+      setIdx(idx => idx += 1)
+  }
+
   console.log(content)
   return (
     <div className="background-drawer-page">
@@ -62,7 +72,13 @@ export default function DrawerPage(props) {
           </Col>
           <Col sm={12} md={9} style={{ height: '100vh', padding: 0 }}>
             {currentPage.type === "img" ? (
-              <Drawer idx={idx} content={content} handleContent={handleContent}/>
+              <Drawer 
+                idx={idx} 
+                content={content} 
+                handleContent={handleContent}
+                prevPage={prevPage}
+                nextPage={nextPage}
+              />
             ) : (
               <TextAudio content={currentPage} />
             )}

@@ -6,11 +6,12 @@
 {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .Col-Image svg
 {
-  height: 100vh;
+  /*height: 100vh;*/
 }
 
 .Col-CollorPallete
@@ -23,6 +24,11 @@
 .mobile-arrows
 {
   display: none;
+}
+
+.btn-img {
+  cursor: pointer;
+  height: 70px;
 }
 
 @media (max-width: 575.98px) {

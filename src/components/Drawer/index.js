@@ -10,7 +10,7 @@ import CollorPallete from "../CollorPallete/";
 import "./Drawer.css";
 
 export default function Drawer(props) {
-  const {idx, handleContent} = props
+  const {idx, handleContent, prevPage, nextPage} = props
   const copyContent = [...props.content]
   const currentPage = copyContent[idx]
   const Page = currentPage.Img
@@ -116,15 +116,15 @@ export default function Drawer(props) {
     <Container className="drawer-content" style={{ maxWidth: 'initial' }}>
       <Row>
         <Col xs={12} className="mobile-arrows">
-          <img src={PreviousPageImg} />
-          <img src={NextPageImg} />
+          <img src={PreviousPageImg} className='btn-img' onClick={prevPage}/>
+          <img src={NextPageImg} className='btn-img' onClick={nextPage}/>
         </Col>
-        <Col sm={12} md={10} className="Col-Image">
-          <img src={PreviousPageImg} />
+        <Col sm={12} md={9} className="Col-Image">
+          <img src={PreviousPageImg} className='btn-img' onClick={prevPage}/>
           <Page className="drawer" onClick={e => drawerColor(e.target)} />
-          <img src={NextPageImg} />
+          <img src={NextPageImg} className='btn-img' onClick={nextPage}/>
         </Col>
-        <Col sm={12} md={2} className="Col-CollorPallete">
+        <Col sm={12} md={3} className="Col-CollorPallete">
           <CollorPallete
             handleColor={handleColor}
             color={currentColor}
