@@ -13,7 +13,7 @@ export default function Gallery(props) {
   const {prevPage, nextPage} = props
 
   return (
-    <Container>
+    <Container className='Col-Content-Text'>
       <Row> 
         <Col xs={12} className="mobile-arrows">
           <img src={PreviousPageImg} className='btn-img' onClick={prevPage}/>
@@ -25,13 +25,13 @@ export default function Gallery(props) {
           <img src={NextPageImg} className='btn-img' onClick={nextPage}/>
         </Col>
       </Row>
-      <Row>
+      {/*<Row>
         <Col className='display-center'>
           <Button className='btn-listen'>
             <FaRegPlayCircle className='icon-listen'/> Ouvir
           </Button>
         </Col>
-      </Row>
+      </Row*/}
     </Container>
   );
 }

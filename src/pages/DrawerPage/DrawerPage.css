@@ -15,7 +15,7 @@
 /*CUSTOMIZANDO SCROLLBAR*/
 .Col-Gallery::-webkit-scrollbar
 {
-  width: 0.8em;
+  width: 0.4em;
   cursor: pointer;
 }
 .Col-Gallery::-webkit-scrollbar-track

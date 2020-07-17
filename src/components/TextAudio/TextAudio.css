@@ -29,3 +29,8 @@
     display: flex;
     justify-content: center;
 }
+
+.Col-Content-Text
+  {
+    height: 100vh;
+  }

@@ -1,5 +1,4 @@
 .container-gallery {
-  margin-top: 10px;
   justify-content: center;
   padding-top: 15px;
   background-color: #568fc3;
@@ -44,5 +43,9 @@
 
 .btn-download:hover {
   background-color: #6f95b8;
+}
+
+.container-gallery-father{
+  padding: 0;
 }
 

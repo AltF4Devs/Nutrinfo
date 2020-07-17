@@ -12,7 +12,7 @@ export default function Gallery(props) {
   const { content, handlePage } = props;
 
   return (
-    <Container>
+    <Container className='container-gallery-father'>
       <Row className="container-gallery">
         {content.map((item, id) => (
           <Col sm={6} className="item-gallery" onClick={() => handlePage(id)}>
