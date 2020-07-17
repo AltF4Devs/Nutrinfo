@@ -119,12 +119,12 @@ export default function Drawer(props) {
           <img src={PreviousPageImg} className='btn-img' onClick={prevPage}/>
           <img src={NextPageImg} className='btn-img' onClick={nextPage}/>
         </Col>
-        <Col sm={12} md={9} className="Col-Image">
+        <Col md={12} lg={9} className="Col-Image">
           <img src={PreviousPageImg} className='btn-img' onClick={prevPage}/>
           <Page className="drawer" onClick={e => drawerColor(e.target)} />
           <img src={NextPageImg} className='btn-img' onClick={nextPage}/>
         </Col>
-        <Col sm={12} md={3} className="Col-CollorPallete">
+        <Col md={12} lg={3} className="Col-CollorPallete">
           <CollorPallete
             handleColor={handleColor}
             color={currentColor}

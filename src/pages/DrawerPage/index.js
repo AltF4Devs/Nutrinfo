@@ -55,8 +55,8 @@ export default function DrawerPage(props) {
 
   console.log(content)
   return (
-    <div className="background-drawer-page">
-      <Container fluid>
+    
+      <Container fluid className="background-drawer-page">
         <Row>
         <Button  className="btn-download">
           <IconDown style={{ marginRight: 5, width: 28, height: 28 }} />
@@ -74,6 +74,6 @@ export default function DrawerPage(props) {
           </Col>
         </Row>
       </Container>
-    </div>
+    
   );
 }

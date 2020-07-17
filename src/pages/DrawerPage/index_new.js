@@ -67,10 +67,10 @@ export default function DrawerPage(props) {
     <div className="background-drawer-page">
       <Container fluid>
         <Row>
-          <Col sm={12} md={3} className="Col-Gallery">
+          <Col sm={12} lg={3} className="Col-Gallery">
             <Gallery content={content} handlePage={handlePage} />
           </Col>
-          <Col sm={12} md={9} style={{ height: '100vh', padding: 0 }}>
+          <Col sm={12} lg={9} className='Col-Content'>
             {currentPage.type === "img" ? (
               <Drawer 
                 idx={idx} 
@@ -80,7 +80,11 @@ export default function DrawerPage(props) {
                 nextPage={nextPage}
               />
             ) : (
-              <TextAudio content={currentPage} />
+              <TextAudio 
+                content={currentPage} 
+                prevPage={prevPage} 
+                nextPage={nextPage}
+              />
             )}
           </Col>
         </Row>

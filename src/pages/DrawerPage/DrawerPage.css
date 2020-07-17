@@ -33,11 +33,20 @@
   background: #1B6DB9;
 }
 
-@media (max-width: 575.98px) {
+.Col-Content
+  {
+    height: 100vh;
+  }
+
+@media (max-width: 768px) {
 
   .Col-Gallery
   {
     display: none;
   }
 
+  .Col-Content
+  {
+    height: initial;
+  }
 }
