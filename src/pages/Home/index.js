@@ -29,13 +29,14 @@ import Col from "react-bootstrap/Col";
 import Image from 'react-bootstrap/Image';
 //Components
 import Button from '../../components/Button/Button';
+import Navbarr from '../../components/NavBar/index'
 
 export default function Home() {
 
     return (
         <>
             {/*<NavBar/>*/}
-            
+            <Navbarr />
             <Container className="container-blue" fluid>
                 <Row style={{ padding: '2vh 0vh' }}>
                     <Col id="nino" sm> 
