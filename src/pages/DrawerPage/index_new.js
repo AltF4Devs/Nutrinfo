@@ -23,21 +23,30 @@ import DrawerFifteen from '../../components/Svgs/Drawer15'
 import DrawerSixteen from '../../components/Svgs/Drawer16'
 
 
+import AudioThree from '../../components/Audio/TextThree.mp3';
+import AudioFive from '../../components/Audio/TextFive.mp3';
+import AudioSix from '../../components/Audio/TextSix.mp3';
+import AudioEight from '../../components/Audio/TextEight.mp3';
+import AudioTen from '../../components/Audio/TextTen.mp3';
+import AudioTwelve from '../../components/Audio/TextTwelve.mp3';
+import AudioFourteen from '../../components/Audio/TextFourteen.mp3';
+
+
 export default function DrawerPage(props) {
 
   const [content, setContent] = React.useState([
     { Img: DrawerOne,  type: "img", newImg: null, id: 0 },
-    { Img: TextThree, type: "text", newImg: null, id: 1 },
+    { Img: TextThree, type: "text", newImg: null, audio: AudioThree, id: 1 },
     { Img: DrawerFour,  type: "img", newImg: null, id: 2 },
-    { Img: TextFive  ,type: "text", newImg: null, id: 3 },
-    { Img: TextSix  ,type: "text", newImg: null, id: 4 },
-    { Img: TextEight, type: "text", newImg: null, id: 5 },
+    { Img: TextFive  ,type: "text", newImg: null, audio: AudioFive, id: 3 },
+    { Img: TextSix  ,type: "text", newImg: null,audio: AudioSix, id: 4 },
+    { Img: TextEight, type: "text", newImg: null,audio: AudioEight, id: 5 },
     { Img: DrawerNine , type: "img", newImg: null, id: 6 },
-    { Img: TextTen, type: "text", newImg: null, id: 7 },
+    { Img: TextTen, type: "text", newImg: null,audio: AudioTen, id: 7 },
     { Img: DrawerEleven, type: "img", newImg: null, id: 8 },
-    { Img: TextTwelve, type: "text", newImg: null, id: 9 },
+    { Img: TextTwelve, type: "text", newImg: null,audio: AudioTwelve, id: 9 },
     { Img: DrawerThirteen , type: "img", newImg: null, id: 10 },
-    { Img: TextFourteen , type: "text", newImg: null, id: 11 },  
+    { Img: TextFourteen , type: "text", newImg: null,audio: AudioFourteen, id: 11 },  
     { Img: DrawerFifteen, type: "img", newImg: null, id: 12 },
     { Img: DrawerSixteen, type: "img", newImg: null, id: 13 },
   ]);
@@ -85,6 +94,7 @@ export default function DrawerPage(props) {
                 prevPage={prevPage} 
                 nextPage={nextPage}
               />
+             
             )}
           </Col>
         </Row>

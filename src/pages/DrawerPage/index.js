@@ -24,6 +24,8 @@ import DrawerFifteen from '../../components/Svgs/Drawer15'
 import DrawerSixteen from '../../components/Svgs/Drawer16'
 
 
+
+
 export default function DrawerPage(props) {
 
   const [content, setContent] = React.useState([
@@ -32,7 +34,7 @@ export default function DrawerPage(props) {
     { Img: DrawerFour,  type: "img", newImg: null, id: 2 },
     { Img: TextFive  ,type: "text", newImg: null, id: 3 },
     { Img: TextSix  ,type: "text", newImg: null, id: 4 },
-    { Img: TextEight, type: "text", newImg: null, id: 5 },
+    { Img: TextEight, type: "text", newImg: null,id: 5 },
     { Img: DrawerNine , type: "img", newImg: null, id: 6 },
     { Img: TextTen, type: "text", newImg: null, id: 7 },
     { Img: DrawerEleven, type: "img", newImg: null, id: 8 },
@@ -42,6 +44,9 @@ export default function DrawerPage(props) {
     { Img: DrawerFifteen, type: "img", newImg: null, id: 12 },
     { Img: DrawerSixteen, type: "img", newImg: null, id: 13 },
   ]);
+
+  
+
   const [idx, setIdx] = React.useState(0);
   const currentPage = content[idx] // Only read
 
@@ -70,6 +75,7 @@ export default function DrawerPage(props) {
               <Drawer idx={idx} content={content} handleContent={handleContent}/>
             ) : (
               <TextAudio content={currentPage} />
+              
             )}
           </Col>
         </Row>
