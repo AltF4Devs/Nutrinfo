@@ -21,14 +21,18 @@ export default function Gallery(props) {
   const Audio = props.content.audio
   const Page = props.content.Img
   const {prevPage, nextPage} = props
-  
+  const [isPlay, setIsPlay] = React.useState(false)
   const audio = document.getElementById('audio') 
-  function play(){
-    audio.play()
-  }
-  
-  function pause(){
-    audio.pause()
+
+  const tooglePlay = () => {
+    if (isPlay){
+      audio.pause()
+      setIsPlay(false)
+    }
+    else{
+      audio.play()
+      setIsPlay(true)
+    }
   }
 
   
@@ -46,12 +50,15 @@ export default function Gallery(props) {
         </Col>
         <Col className='display-center'>
          
-          <Button className='btn-listen' onClick={play}>
-            <FaRegPlayCircle className='icon-listen'  /> Ouvir 
-          </Button>
-
-          <Button className='btn-listen' onClick={pause}>
-            <FaPause/> Pausa
+          <Button className='btn-listen' onClick={tooglePlay}>
+            {isPlay ? 
+              <>
+                <FaPause/> Pausa
+              </>
+            : <>
+                <FaRegPlayCircle className='icon-listen'  /> Ouvir
+            </>
+          }
           </Button>
          
          
