@@ -1,0 +1,24 @@
+
+
+@media (max-width: 400px) {
+
+    .sectionInitial {
+        width: 100%;
+    }
+   
+    .sectionInitial h1,h2,h3 {
+        font-size: 30px;
+       
+    }
+
+
+}
+
+
+@media (min-width: 1700px){
+   
+}
+
+@media (max-height: 760px){
+    
+}

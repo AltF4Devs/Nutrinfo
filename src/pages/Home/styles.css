@@ -1,3 +1,167 @@
-.sectionSobre {
-    background-color: #FFFFFF;
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Chicle&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap');
+
+/*[class*="col"]
+{
+    border: 1px solid red;
+}*/
+
+.container-blue
+{
+    background: #CCE7F9;
 }
+.container-blue #center
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.ff-chicle-cursive
+{
+    font-family: 'Chicle', cursive;
+}
+
+.section-title
+{
+    text-align: center;
+    padding: 3vh 0vh;
+    font-weight: bold;
+}
+
+.nutri-info-logo
+{
+    display: block;
+    margin: auto;
+    padding: 0;
+    max-width: 25vh;
+}
+
+.container-white
+{
+    background-color: #FFF;
+    border-top: solid 6px #999999;
+    border-bottom: solid 6px #999999;
+}
+
+#container-about
+{
+    padding-bottom: 3vh;
+}
+#container-about .row [class*="col"]
+{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+#container-about .row [class*="col"] p
+{
+    font-size: 28px;
+    padding: 2vh 2vh;
+}
+
+.row-videos [class*="col"]
+{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (max-width: 576px) {
+    #footer [class*="col"]
+    {
+        padding: 2vh 0vh!important;
+    }
+}
+
+/*Full HD Monitor*/
+@media (min-width: 1200px) {
+    #container-about .row [class*="col"] p
+    {
+        font-size: 28px;
+        padding: 2vh 5vh;
+    }
+}
+
+
+/* FOOTER */
+#footer .row
+{
+    padding: 10px 0px;
+}
+#footer p
+{
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+#footer [class*="col"]
+{
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+/*
+
+footer {
+    
+    position:absolute;
+    bottom: 0;
+
+    height: 90px;
+
+    background-color: #1B6DB9;
+    color: white;
+}
+
+
+footer #ufac img{
+    padding-left: -100px;
+    margin-top: 10px;
+    width: 120px;
+    height: 60px;
+}
+
+footer #contact {
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+footer #contact p{
+    font-weight: bold;
+    text-align: center;
+
+}
+
+footer #social {
+    padding-top: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    
+}
+footer #social p{
+    margin-top: -10px;
+   
+    
+}
+footer #social a {
+    text-align: center;
+    padding: 0 10px;
+    margin-top: -15px;
+    color: white;
+    display: flex;
+
+    font-weight: normal;
+
+}
+
+footer #social img {
+    width: 25px;
+    height: 35px;
+}
+
+*/

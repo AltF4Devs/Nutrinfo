@@ -1,11 +1,17 @@
 .navBar {
     background-color: #1B6DB9;
+    max-height: 10vh;
+    max-width:  100%;
 }
 
 .logo1 {
     height: 50%;
 }
+img {
+    padding-top: 2vh;
+    height: 200px;
 
+}
 .divisorLine {
     border: solid 3px #999999;
 }
