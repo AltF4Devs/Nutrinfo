@@ -1,0 +1,52 @@
+.background-drawer-page {
+  background-color: #cce7f9;
+}
+
+/*[class*="col"] {
+  border: 1px solid red;
+}*/
+
+.Col-Gallery
+{
+  overflow-x: auto;
+  height: 100vh;
+}
+
+/*CUSTOMIZANDO SCROLLBAR*/
+.Col-Gallery::-webkit-scrollbar
+{
+  width: 0.4em;
+  cursor: pointer;
+}
+.Col-Gallery::-webkit-scrollbar-track
+{
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+.Col-Gallery::-webkit-scrollbar-thumb
+{
+  background: #1b6db9d2; 
+  border-radius: 10px;
+}
+.Col-Gallery::-webkit-scrollbar-thumb:hover
+{
+  background: #1B6DB9;
+}
+
+.Col-Content
+  {
+    height: 100vh;
+  }
+
+@media (max-width: 768px) {
+
+  .Col-Gallery
+  {
+    display: none;
+  }
+
+  .Col-Content
+  {
+    height: initial;
+  }
+}

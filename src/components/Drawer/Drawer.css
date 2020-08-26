@@ -1,0 +1,59 @@
+.drawer {
+  cursor: url("../../assets/paint-brush.svg") 0 32, auto;
+}
+
+.Col-Image
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Col-Image svg
+{
+  height: 100vh;
+}
+
+.Col-CollorPallete
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-arrows
+{
+  display: none;
+}
+
+.btn-img {
+  cursor: pointer;
+  height: 70px;
+}
+
+@media (max-width: 768px) {
+
+  .Col-Image img
+  {
+    display: none;
+  }
+
+  .mobile-arrows
+  {
+    display: flex;
+    justify-content: space-around;
+    width: 50px;
+    margin: 5px 0px;
+  }
+
+  .Col-Image
+  {
+    margin: 10px 0px;
+  }
+
+  .Col-Image svg
+  {
+    height: 100%;
+    width: 100%;
+  }
+}

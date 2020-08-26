@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import "./styles.css";
 import logo from "../NavBar/logo-nutrinfo.png";
