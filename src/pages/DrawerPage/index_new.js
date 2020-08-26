@@ -32,7 +32,7 @@ import AudioTwelve from '../../components/Audio/TextTwelve.mp3';
 import AudioFourteen from '../../components/Audio/TextFourteen.mp3';
 
 
-export default function DrawerPage(props) {
+export default function DrawerPage() {
 
   const [content, setContent] = React.useState([
     { Img: DrawerOne,  type: "img", newImg: null, id: 0 },
