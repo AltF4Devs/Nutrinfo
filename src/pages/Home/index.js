@@ -13,7 +13,7 @@ import nina from "../../assets/nina.png";
 
 import baixar from "../../assets/btn-baixar.png";
 import colorir from "../../assets/btn-colorir.png";
-
+import Livro from '../../assets/livro_covid.pdf';
 
 
 import instagram from "../../assets/instagram.png";
@@ -30,6 +30,8 @@ import Image from 'react-bootstrap/Image';
 //Components
 import Button from '../../components/Button/Button';
 import Navbarr from '../../components/NavBar/index'
+
+
 
 export default function Home() {
 
@@ -57,8 +59,8 @@ export default function Home() {
                         <h2 className="ff-chicle-cursive" style={{ color: '#F27838' }}>VAMOS COLORIR?</h2>
                         
                         <div style={{ width: '100%', display: 'flex', justifyContent: 'center', padding: '5vh 0vh' }}>
-                            <Button icon="download" style={{ marginRight: '4vh' }}>BAIXAR</Button>
-                            <Button variant="yellow" icon="paint">COLORIR</Button>
+                            <Button icon="download" style={{ marginRight: '4vh' }} href={Livro}>BAIXAR</Button>
+                            <Button variant="yellow" icon="paint" href="/colorir">COLORIR</Button>
                         </div>
 
                         <div id="stayHome">

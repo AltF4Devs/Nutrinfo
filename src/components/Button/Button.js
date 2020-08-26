@@ -30,10 +30,12 @@ export default function Button(props) {
         icon = <img src={PaintIcon} alt="paint-icon" className="btn-icon" />;
     }
     return(
-        <button className={classes} style={props.style}>
-            {icon}
-            {props.children}
-        </button>
+        <a href={props.href} className="td-none">
+            <button className={classes} style={props.style}>
+                {icon}
+                {props.children}
+            </button>
+        </a>
     )
 
 }

@@ -33,3 +33,7 @@
 {
     background-color: #F1D48B;
 }
+
+.td-none, .td-none:hover {
+    text-decoration: none;
+}
