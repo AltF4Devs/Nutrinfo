@@ -53,18 +53,47 @@ export default function DrawerPage() {
   const [idx, setIdx] = React.useState(0);
   const currentPage = content[idx] // Only read
 
-  const saveSvgAsPng = require('save-svg-as-png')
-  const imageOptions = {
-    scale: 5,
-    encoderOptions: 1,
-    backgroundColor: 'white',
+  const download = (imgURI) => {
+    var evt = new MouseEvent('click', {
+      view: window,
+      bubbles: false,
+      cancelable: true
+    });
+  
+    var a = document.createElement('a');
+    a.setAttribute('download', 'MeuDesenhoColorido.png');
+    a.setAttribute('href', imgURI);
+    a.setAttribute('target', '_blank');
+  
+    a.dispatchEvent(evt);
   }
 
-  const download = async () => {
-    const draw = document.getElementById("drawer")
-    console.log(draw)
-    const a = await saveSvgAsPng.saveSvgAsPng(draw, 'ze', imageOptions);
-    console.log(a)
+  const downloadEvent = () => {
+    var svg = document.querySelector('#drawer');
+    if(svg == null)
+      return
+
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+    var data = (new XMLSerializer()).serializeToString(svg);
+    var DOMURL = window.URL || window.webkitURL || window;
+
+    var img = new Image();
+    var svgBlob = new Blob([data], {type: 'image/svg+xml;charset=utf-8'});
+    var url = DOMURL.createObjectURL(svgBlob);
+
+    img.onload = function () {
+      ctx.drawImage(img, 0, 0);
+      DOMURL.revokeObjectURL(url);
+
+      var imgURI = canvas
+          .toDataURL('image/png')
+          .replace('image/png', 'image/octet-stream');
+
+      download(imgURI);
+    };
+
+    img.src = url;
   }
 
   const handleContent = (newContent) => {
@@ -93,7 +122,7 @@ export default function DrawerPage() {
           <Col sm={12} lg={3} className="Col-Gallery">
           <Row>
               <Col>
-                <Button block onClick={download} className="btn-download" style={{marginTop: 5, marginBottom: 5}}>
+                <Button block onClick={downloadEvent} className="btn-download" style={{marginTop: 5, marginBottom: 5}}>
                   <IconDown style={{ marginRight: 5, width: 28, height: 28 }} />
                   Baixar
                 </Button>
@@ -119,6 +148,7 @@ export default function DrawerPage() {
              
             )}
           </Col>
+          <canvas id="canvas" width="794" height="1122" style={{ display: "none" }}></canvas>
         </Row>
       </Container>
     </div>
