@@ -16,9 +16,11 @@
     "react-bootstrap": "1.0.0",
     "react-color": "2.18.1",
     "react-dom": "16.13.1",
+    "react-download-svg": "0.0.4",
     "react-icons": "^3.10.0",
     "react-router-dom": "5.1.2",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "save-svg-as-png": "^1.4.17"
   },
   "devDependencies": {
     "typescript": "3.8.3"

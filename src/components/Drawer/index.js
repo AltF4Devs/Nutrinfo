@@ -5,9 +5,12 @@ import Col from "react-bootstrap/Col";
 //Images
 import NextPageImg from '../../assets/next_arrow.svg';
 import PreviousPageImg from '../../assets/previous_arrow.svg';
+import { ReactComponent as IconDown } from "../../assets/icon-down.svg";
 
 import CollorPallete from "../CollorPallete/";
 import "./Drawer.css";
+//import { Button } from "react-bootstrap";
+import Button from '../Button/Button'
 
 export default function Drawer(props) {
   const {idx, handleContent, prevPage, nextPage} = props
@@ -117,11 +120,13 @@ export default function Drawer(props) {
       <Row>
         <Col xs={12} className="mobile-arrows">
           <img src={PreviousPageImg} className='btn-img' onClick={prevPage}/>
+          <Button icon='download' style={{fontSize: 20, color: 'white'}}> Baixar</Button>
+          
           <img src={NextPageImg} className='btn-img' onClick={nextPage}/>
         </Col>
         <Col md={12} lg={9} className="Col-Image">
           <img src={PreviousPageImg} className='btn-img' onClick={prevPage}/>
-          <Page className="drawer" onClick={e => drawerColor(e.target)} />
+          <Page className="drawer" id='drawer' onClick={e => drawerColor(e.target)} />
           <img src={NextPageImg} className='btn-img' onClick={nextPage}/>
         </Col>
         <Col md={12} lg={3} className="Col-CollorPallete">

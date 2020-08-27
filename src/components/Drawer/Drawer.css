@@ -2,6 +2,16 @@
   cursor: url("../../assets/paint-brush.svg") 0 32, auto;
 }
 
+.btn-download {
+  background-color: #a0b9d0;
+  border: none;
+  font-size: 20px;
+}
+
+.btn-download:hover {
+  background-color: #6f95b8;
+}
+
 .Col-Image
 {
   display: flex;
@@ -42,6 +52,7 @@
   {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 50px;
     margin: 5px 0px;
   }

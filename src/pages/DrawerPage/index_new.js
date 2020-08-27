@@ -3,7 +3,8 @@ import Drawer from "../../components/Drawer";
 import Navbar from "../../components/NavBar";
 import Gallery from "../../components/Gallery";
 import TextAudio from "../../components/TextAudio";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
+import { ReactComponent as IconDown } from "../../assets/icon-down.svg";
 
 import "./DrawerPage.css";
 
@@ -21,7 +22,6 @@ import DrawerThirteen from '../../components/Svgs/Drawer13'
 import TextFourteen from '../../components/Svgs/TextFourteen'
 import DrawerFifteen from '../../components/Svgs/Drawer15'
 import DrawerSixteen from '../../components/Svgs/Drawer16'
-
 
 import AudioThree from '../../components/Audio/TextThree.mp3';
 import AudioFive from '../../components/Audio/TextFive.mp3';
@@ -53,6 +53,20 @@ export default function DrawerPage() {
   const [idx, setIdx] = React.useState(0);
   const currentPage = content[idx] // Only read
 
+  const saveSvgAsPng = require('save-svg-as-png')
+  const imageOptions = {
+    scale: 5,
+    encoderOptions: 1,
+    backgroundColor: 'white',
+  }
+
+  const download = async () => {
+    const draw = document.getElementById("drawer")
+    console.log(draw)
+    const a = await saveSvgAsPng.saveSvgAsPng(draw, 'ze', imageOptions);
+    console.log(a)
+  }
+
   const handleContent = (newContent) => {
     setContent(newContent)
   }
@@ -77,6 +91,14 @@ export default function DrawerPage() {
       <Container fluid>
         <Row>
           <Col sm={12} lg={3} className="Col-Gallery">
+          <Row>
+              <Col>
+                <Button block onClick={download} className="btn-download" style={{marginTop: 5, marginBottom: 5}}>
+                  <IconDown style={{ marginRight: 5, width: 28, height: 28 }} />
+                  Baixar
+                </Button>
+              </Col>
+          </Row>
             <Gallery content={content} handlePage={handlePage} />
           </Col>
           <Col sm={12} lg={9} className='Col-Content'>
