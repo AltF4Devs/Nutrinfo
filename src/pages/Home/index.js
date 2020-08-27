@@ -114,15 +114,16 @@ export default function Home() {
                 <h1 className="section-title">Videos</h1> 
 
                 <Row className="row-videos">
-                    <Col md="12" lg="4"><iframe title="video1" width="380" height="250" src="https://www.youtube.com/embed/7_CGP-12AE0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></Col>
-                    <Col md="12" lg="4"><iframe title="video2" width="380" height="250" src="https://www.youtube.com/embed/7_CGP-12AE0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></Col>
-                    <Col md="12" lg="4"><iframe title="video3" width="380" height="250" src="https://www.youtube.com/embed/7_CGP-12AE0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></Col>
+                    <Col md="12" lg="4"><iframe title="video1" width="380" height="250" src="https://www.youtube.com/embed/J8uL4HMHlgs" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></Col>
+                    <Col md="12" lg="4"><iframe title="video3" width="380" height="250" src="https://www.youtube.com/embed/jQnvAWQb-VI" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></Col>
+                    <Col md="12" lg="4"><iframe title="video4" width="380" height="250" src="https://www.youtube.com/embed/WQQCf_CAVpA" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></Col>
                 </Row>
 
                 <Row className="row-videos" >
-                    <Col md="12" lg="4"><iframe title="video4" width="380" height="250" src="https://www.youtube.com/embed/7_CGP-12AE0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></Col>
-                    <Col md="12" lg="4"><iframe title="video5" width="380" height="250" src="https://www.youtube.com/embed/7_CGP-12AE0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></Col>
-                    <Col md="12" lg="4"><iframe title="video6" width="380" height="250" src="https://www.youtube.com/embed/7_CGP-12AE0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></Col>
+                    <Col md="12" lg="4"><iframe title="video5" width="380" height="250" src="https://www.youtube.com/embed/faTVSzK0H18" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></Col>
+                    <Col md="12" lg="4"><iframe title="video6" width="380" height="250" src="https://www.youtube.com/embed/nrhkGfWQwcM" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></Col>
+                    <Col md="12" lg="4"><iframe title="video2" width="380" height="250" src="https://www.youtube.com/embed/HlwDPo_mgtA" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></Col>
+
                 </Row>
             </Container>
 
@@ -192,9 +193,9 @@ export default function Home() {
                         <p>Redes Sociais</p>
 
                         <div style={{ display: 'flex', flexDirection: 'row', padding: '0vh 15vh' ,justifyContent: 'space-around' }}>
-                            <a href=""> <Image src={instagram} style={{ paddingTop: '0vh' }} fluid /></a>
-                            <a href=""> <Image src={facebook} style={{ paddingTop: '0vh' }} fluid /></a>
-                            <a href=""> <Image src={youtube} style={{ paddingTop: '0vh' }} fluid /></a>
+                            <a href="https://www.instagram.com/nutrinfo_ufac/"> <Image src={instagram} style={{ paddingTop: '0vh' }} fluid /></a>
+                            <a href="https://www.facebook.com/nutrinfoufac/"> <Image src={facebook} style={{ paddingTop: '0vh' }} fluid /></a>
+                            <a href="https://www.youtube.com/channel/UCry16Q1saZA-5TiaSl3X6IQ"> <Image src={youtube} style={{ paddingTop: '0vh' }} fluid /></a>
                         </div>
                 
                     </Col>
