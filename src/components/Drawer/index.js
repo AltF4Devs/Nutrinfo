@@ -13,7 +13,7 @@ import "./Drawer.css";
 import Button from '../Button/Button'
 
 export default function Drawer(props) {
-  const {idx, handleContent, prevPage, nextPage} = props
+  const { idx, handleContent, prevPage, nextPage, handleDownload } = props
   const copyContent = [...props.content]
   const currentPage = copyContent[idx]
   const Page = currentPage.Img
@@ -23,7 +23,7 @@ export default function Drawer(props) {
   const refDrawer = React.useRef()
 
   React.useEffect(() => {
-    clearUndoRedo()  
+    clearUndoRedo()
     paintSave() // Pinta o desenho atual, se ele ja tiver sido pintado antes
 
     // Salva uma referencia do desenho atual, para que ele possa ser salvo
@@ -38,7 +38,7 @@ export default function Drawer(props) {
   const paintSave = () => {
     // Se newImg não for nulo, a imagem ja foi pintada antes. Então repintamos
     // os paths da imagem atual com as cores dos paths armazenados
-    if (currentPage.newImg){
+    if (currentPage.newImg) {
       const prevPaths = currentPage.newImg
       const newDrawer = document.querySelector('.drawer')
       const newPaths = newDrawer.querySelectorAll('path')
@@ -65,7 +65,7 @@ export default function Drawer(props) {
 
   const drawerColor = path => {
     const prevColor = path.style.fill;
-    if(path.classList.contains("fil1"))
+    if (path.classList.contains("fil1"))
       return
 
     path.style.fill = currentColor;
@@ -122,15 +122,15 @@ export default function Drawer(props) {
     <Container className="drawer-content" style={{ maxWidth: 'initial' }}>
       <Row>
         <Col xs={12} className="mobile-arrows">
-          <img src={PreviousPageImg} className='btn-img' onClick={prevPage}/>
-          <Button icon='download' style={{fontSize: 20, color: 'white'}}> Baixar</Button>
-          
-          <img src={NextPageImg} className='btn-img' onClick={nextPage}/>
+          <img src={PreviousPageImg} className='btn-img' onClick={prevPage} />
+          <Button icon='download' onClick={handleDownload} style={{ fontSize: 20, color: 'white' }}> Baixar</Button>
+
+          <img src={NextPageImg} className='btn-img' onClick={nextPage} />
         </Col>
         <Col md={12} lg={9} className="Col-Image">
-          <img src={PreviousPageImg} className='btn-img' onClick={prevPage}/>
+          <img src={PreviousPageImg} className='btn-img' onClick={prevPage} />
           <Page className="drawer" id='drawer' onClick={e => drawerColor(e.target)} />
-          <img src={NextPageImg} className='btn-img' onClick={nextPage}/>
+          <img src={NextPageImg} className='btn-img' onClick={nextPage} />
         </Col>
         <Col md={12} lg={3} className="Col-CollorPallete">
           <CollorPallete
