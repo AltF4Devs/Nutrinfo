@@ -65,6 +65,9 @@ export default function Drawer(props) {
 
   const drawerColor = path => {
     const prevColor = path.style.fill;
+    if(path.classList.contains("fil1"))
+      return
+
     path.style.fill = currentColor;
     pushUndo(prevColor, path);
   };
