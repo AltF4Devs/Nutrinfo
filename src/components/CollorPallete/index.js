@@ -110,8 +110,8 @@ export default function CollorPallete(props) {
             }}
           >
             <div>
-              <FaPalette className="icon-palette" />
-              Mais Cores
+              <FaPalette className="icon-palette" style={{ width: "100%" }} />
+              + Cores
             </div>
           </IconContext.Provider>
         </Button>
