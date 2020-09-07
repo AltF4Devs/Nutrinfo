@@ -33,7 +33,7 @@ export default function CollorPallete(props) {
     <div className="pallete-container">
       <CirclePicker
         colors={
-          ["#AE54E5","#333333","#4C1069","#979797","#FF69B4","#F1D2A3","#EB2E54","#D09063","#FA8072","#8B4513","#F11414","#4E291A","#3AB5DD","#F4F44D","#09679C","#FFFF00","#3CB371","#F2994A","#0F6433","#F54E10"]
+          ["#AE54E5", "#333333", "#4C1069", "#979797", "#FF69B4", "#F1D2A3", "#EB2E54", "#D09063", "#FA8072", "#8B4513", "#F11414", "#4E291A", "#3AB5DD", "#F4F44D", "#09679C", "#FFFF00", "#3CB371", "#F2994A", "#0F6433", "#F54E10"]
         }
         onChangeComplete={handleChangeComplete}
         width={100}
@@ -111,7 +111,7 @@ export default function CollorPallete(props) {
           >
             <div>
               <FaPalette className="icon-palette" />
-              Cores
+              Mais Cores
             </div>
           </IconContext.Provider>
         </Button>
