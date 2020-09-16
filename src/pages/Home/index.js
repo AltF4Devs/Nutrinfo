@@ -29,12 +29,15 @@ import Video from '../../components/HomeVideo/index'
 
 export default function Home() {
     const linksVideos = [
+        "https://www.youtube.com/embed/HlwDPo_mgtA",
+        "https://www.youtube.com/embed/bp57HKQ6cX0",
+        "https://www.youtube.com/embed/nrhkGfWQwcM",
+        "https://www.youtube.com/embed/faTVSzK0H18",
+        "https://www.youtube.com/embed/WQQCf_CAVpA",
+        "https://www.youtube.com/embed/25QElKeb61U",
         "https://www.youtube.com/embed/J8uL4HMHlgs",
         "https://www.youtube.com/embed/jQnvAWQb-VI",
-        "https://www.youtube.com/embed/WQQCf_CAVpA",
-        "https://www.youtube.com/embed/faTVSzK0H18",
-        "https://www.youtube.com/embed/nrhkGfWQwcM",
-        "https://www.youtube.com/embed/HlwDPo_mgtA"
+        "https://www.youtube.com/embed/zL3kxj8tVJM",
     ]
     const [showVideos, setShowVideos] = React.useState(
         linksVideos.length < 6 ?
@@ -182,7 +185,7 @@ export default function Home() {
 
                     <Col xs={12} sm={4} style={{ display: 'flex', flexDirection: 'column' }}>
                         <p>Contato</p>
-                        <strong>contato@nutrinfo.com.br</strong>
+                        <strong>nutrinfoufac@gmail.com</strong>
                     </Col>
 
                     <Col xs={12} sm={4} style={{ display: 'flex', flexDirection: 'column' }}>
