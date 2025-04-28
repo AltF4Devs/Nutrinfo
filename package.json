@@ -9,7 +9,7 @@
   "dependencies": {
     "@svgr/webpack": "^5.4.0",
     "bootstrap": "4.4.1",
-    "canvg": "3.0.6",
+    "canvg": "4.0.3",
     "file-loader": "^6.0.0",
     "react": "16.13.1",
     "react-audio-player": "^0.13.0",
